@@ -4,5 +4,19 @@ let storyWords = story.split(' ');
 let unnecessaryWord = 'literally';
 let misspelledWord = 'beautifull';
 let badWord = 'freaking';
+let count = 0;
 
-console.log(storyWords.join(' '))
+// this is increasing count for each word in the story
+storyWords.forEach( (word) => {
+  count++
+});
+// console.log(count);
+
+//This filters out a specific word
+storyWords = storyWords.filter(word => {
+  if (word != unnecessaryWord) {
+    return word;
+  }
+});
+
+// console.log(storyWords.join(' '));
